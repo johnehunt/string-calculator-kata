@@ -43,4 +43,22 @@ class CalculatorTest {
     int result = calc.add("1,2,3");
     assertThat("a string with 1,2,3  should return 6", result, equalTo(6));
   }
+
+  @Test
+  void testFiveTwoIntegerSemiColonSeparatedString() {
+    int result = calc.add("1;2");
+    assertThat("a string with 1;2  should return 3", result, equalTo(3));
+  }
+
+  @Test
+  void testFiveTwoIntegerNewlineSeparatedString() {
+    int result = calc.add("1\n2");
+    assertThat("a string with 1\n2  should return 3", result, equalTo(3));
+  }
+
+  @Test
+  void testFiveTwoMixedSeparatedString() {
+    int result = calc.add("1\n2,3");
+    assertThat("a string with 1\n2,3  should return 6", result, equalTo(6));
+  }
 }

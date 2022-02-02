@@ -6,7 +6,7 @@ public class Calculator {
     if (numbers == null || numbers.equals("")) {
       return total;
     } else {
-      String[] values = numbers.split(",");
+      String[] values = numbers.split(",|;|\n");
       for (String value : values) {
         int num = Integer.parseInt(value);
         total += num;
