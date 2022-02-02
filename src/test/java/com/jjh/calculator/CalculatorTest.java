@@ -23,13 +23,18 @@ class CalculatorTest {
   @Test
   void testOneEmptyString() {
     int result = calc.add("");
-    assertThat("an empty string should return zero", 0, equalTo(result));
+    assertThat("an empty string should return zero", result, equalTo(0));
   }
 
   @Test
-  void testTwoSingleValueString
-    () {
+  void testTwoSingleValueString() {
     int result = calc.add("1");
-    assertThat("a string with 1 should return 1", 1, equalTo(result));
+    assertThat("a string with 1 should return 1", result, equalTo(1));
+  }
+
+  @Test
+  void testThreeTwoIntegerCommaSeparatedString() {
+    int result = calc.add("1,2");
+    assertThat("a string with 1, 2 should return 3", result, equalTo(3));
   }
 }

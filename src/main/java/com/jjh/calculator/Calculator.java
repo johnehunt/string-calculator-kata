@@ -2,11 +2,16 @@ package com.jjh.calculator;
 
 public class Calculator {
   public int add(String numbers) {
-    // Only do as much as is needed for the test
-    int value = 0;
-    if (!numbers.equals("")) {
-      value = Integer.parseInt(numbers);
+    int total = 0;
+    if (numbers == null || numbers.equals("")) {
+      return total;
+    } else {
+      String[] values = numbers.split(",");
+      for (String value : values) {
+        int num = Integer.parseInt(value);
+        total += num;
+      }
     }
-    return value;
+    return total;
   }
 }
