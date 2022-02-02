@@ -61,4 +61,10 @@ class CalculatorTest {
     int result = calc.add("1\n2,3");
     assertThat("a string with 1\n2,3  should return 6", result, equalTo(6));
   }
+
+  @Test
+  void testFiveThreeMixedSeparatedString() {
+    int result = calc.add("1,2\n3;4");
+    assertThat("a string with 1,2\\n3;4 should return 10", result, equalTo(10));
+  }
 }
