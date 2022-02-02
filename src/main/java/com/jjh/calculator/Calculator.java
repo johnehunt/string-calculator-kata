@@ -4,7 +4,9 @@ public class Calculator {
   public int add(String numbers) {
     // Only do as much as is needed for the test
     int value = 0;
-    if (!numbers.equals("")) {
+    if (numbers == null || numbers.equals("")) {
+      return value;
+    } else {
       value = Integer.parseInt(numbers);
     }
     return value;
