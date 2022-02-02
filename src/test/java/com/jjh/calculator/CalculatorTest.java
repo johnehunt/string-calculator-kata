@@ -25,4 +25,11 @@ class CalculatorTest {
     int result = calc.add("");
     assertThat("an empty string should return zero", 0, equalTo(result));
   }
+
+  @Test
+  void testTwoSingleValueString
+    () {
+    int result = calc.add("1");
+    assertThat("a string with 1 should return 1", 1, equalTo(result));
+  }
 }
