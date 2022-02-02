@@ -23,6 +23,6 @@ class CalculatorTest {
   @Test
   void testOneEmptyString() {
     int result = calc.add("");
-    assertThat("an empty string should return zero", 0, equalTo(result));
+    assertThat("an empty string should return zero", result, equalTo(0));
   }
 }
