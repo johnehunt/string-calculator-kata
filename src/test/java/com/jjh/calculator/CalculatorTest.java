@@ -37,4 +37,10 @@ class CalculatorTest {
     int result = calc.add("1,2");
     assertThat("a string with 1, 2 should return 3", result, equalTo(3));
   }
+
+  @Test
+  void testFourThreeIntegerCommaSeparatedString() {
+    int result = calc.add("1,2,3");
+    assertThat("a string with 1,2,3  should return 6", result, equalTo(6));
+  }
 }
